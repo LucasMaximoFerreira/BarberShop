@@ -1,0 +1,296 @@
+/*CASO VOCE QUEIRA SELECIONAR ALGUM ELEMENTO SENDO ELE FILHO, IRMAO OU NETO DE ALGUMA REFERENCIA EXISTE
+ALGUNS ATALHOS PARA ISSO, COMO POR EXEMPLO:
+ 
+-- aqui selecionamos o fiho direto da tag main
+main > p{
+    background: blue;
+}
+-- ja aqui o irmao ou seja o q vem abaixo da img
+
+img + p{
+    background: blue:
+}
+-- e aqui todos os irmaos dele
+
+img ~ p{
+    background:blue;
+}
+
+*/
+
+
+body{
+    /*Adicionar a fonte no site*/
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+header{
+    background: #BBBBBB;
+    /*margem pra cima e pra baixo e direita e esquerda*/
+    padding: 20px 0;
+}
+
+.produtos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.produtos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-color: #000;
+    border-width: 2px;
+    border-style: solid;
+    border-top-width: 5px;
+    border-left-width: 5px;
+    /*bordas arredondadas*/
+    border-radius: 20px;
+}
+
+.produtos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+.produto-preco{
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0 0 0; /* ou margin-top: 10px*/
+}
+.produto-desc{
+    font-size: 18px;
+
+
+}
+.caixa{
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+footer{
+    text-align: center;
+    background: #000;
+    padding: 40px 0;
+}
+.copy{
+    color: #FFF;
+    font-size: 13px;
+    margin: 20px 0;
+}
+
+nav{
+    position: absolute;
+    top: 100px;
+    right: 0;
+
+}
+nav li{
+    display: inline;
+    /*espaçamento entre as letras*/
+    margin: 0 0 0 15px;
+} 
+
+.produtos li:hover{
+    border-color: rgb(170, 154, 10);
+}
+
+/*usamos o active para quando ele apertar o objeto na tela fazer a seguinte função*/
+.produtos li:active{
+    border-color: rgb(39, 119, 7);
+}
+
+.produtos li:hover h2{
+    font-size: 32px;
+}
+/*usamos o hover para caso o mouse fique sobre o texto desejado ele faça as seguintes funcoes*/
+nav a:hover{
+    color:  rgb(170, 154, 10);
+    text-decoration: underline;
+
+}
+
+nav a{
+    /*deixar a letra maiuscula*/
+    text-transform: uppercase;
+    color: #000000;
+    /*peso da fonte - negrito*/
+    font-weight: bold;
+    font-size: 22px;
+    /*tirar a linha embaixo da letra*/
+    text-decoration: none;
+    
+}
+
+form{
+    margin: 40px 0;
+}
+
+form label, form legend{
+    display:block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+.input-padrao{
+    display: block;
+    margin: 0 0 10px;
+    padding: 7px 25px;
+    width: 50%;
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+ 
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    background: rgb(252, 192, 82);
+    color:white;
+    font-weight: bold;
+    font-size: 18px;
+    border:none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s all;
+}
+
+.itens{
+    /*Altura da linha*/
+    font-size: 18px;
+    line-height: 1.5;
+}
+/*Usamos para pegar valores especificos da lista*/
+/*
+.itens:nth-child(3){ ---> caso coloque no lugar do "3" o valor de "2n" pegara apenas os valores pares
+    font-weight: bold;
+}
+*/
+.itens:first-child{
+    font-weight: bold;
+}
+.enviar:hover{
+    background: orange;
+    /*auemntar seu conteudo em 2%*/
+    transform: scale(1.02);
+}
+
+table{
+    margin: 20px 0 40px;
+}
+
+thead{
+    background: #555;
+    color: white;
+    font-weight: bold;
+}
+td, th{
+    border: 1px solid black;
+    padding: 8px 15px;
+}
+.principal{
+    padding: 3em 0;
+    background: #FEF;
+    width: 940px;
+    margin: 0 auto;
+}
+.foto{
+    width: 100%;
+}
+
+.titulo-principal{
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;
+}
+
+/*Usamos para colocar alguma funcao ou elemento antes ou depois do texto especificado*/
+.titulo-principal:before{
+    content: " - ";
+}
+
+.titulo-principal::after{
+    content: " - ";
+}
+
+.principal p{
+    margin: 0 0 1em;
+}
+
+.principal strong{
+    font-weight: bold;
+}
+
+.principal em{
+    font-style: italic;
+}
+
+.imgbeneficios{
+    width: 60%; /* X /  Y /Sombra/ expansao  / cor*/
+    box-shadow: -10px 10px 20px 0px rgb(49, 48, 48);
+}
+.utensilios{
+    width: 22%;
+    float: left;
+    margin: 0 20px 0 20px;
+}
+.mapaCont{
+    width: 940px;
+    margin: 0 auto;
+}
+.mapa{
+    padding: 3em 0;
+    /*Usamos para fazer um gradiente, pode ser feito como mais de 2 cores*/
+    background: linear-gradient(#FEF,#888);
+}
+
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+.beneficios{
+    width: 3em 0;
+    background: #888;
+}
+.video{
+    width: 560px;
+    margin: 2em auto 0;
+}
+
+.conteudo{
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+/*Para deixarmos nosso site responsivo, precisamos adicionar isso em nossa linda de código,
+assim podera ser feito uma modificacao para a tela de celular
+*/
+
+@media screen and (max-width: 480px){
+    .caixa, .principal, .conteudo, .mapaCont, .video{
+        width: auto;
+    }
+    h1{
+        text-align: center;
+    }
+    nav{
+        position: static;
+    }
+    .lista, .imgbeneficios{
+        width: 100%;
+    }
+
+}

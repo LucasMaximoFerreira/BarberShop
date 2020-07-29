@@ -1,0 +1,70 @@
+
+/*modificar todos os paragrafos */
+
+p{
+    /*alinhar um texto ao centro*/
+    text-align: center;
+}
+
+.titulo-centralizado{
+    text-align: center;
+    /*mudar a cor do texto*/
+    background: #CCC;
+
+}
+.titulo-principal{
+    padding-left: 20px;
+}
+/*modificar todos os titulos em h2*/
+h2{
+    text-align: center;
+}
+/*modificar os textos em italico e em negrito*/
+em strong{
+    color: #FF0000;
+} 
+/*modificar todas as tabelas/listas*/
+
+ul{
+    /*todo elemento é renderizado como uma caiza retangular e essa propriedade vai determinar como essa
+    caixa vai se comportar:
+    block - se comporta como um bloco. Ocupando praticamente toda a largura disponivel na pagina
+    inline - se comporta como um elemento em linha
+    inline-block - semelhante ao inline, porem, conseguimos definir as propriedades de largura e altura*/
+    display: inline-block;
+    vertical-align: top;
+    /*largura*/
+    width: 20%;
+    /*margem*/
+    margin-right: 15%;
+
+}
+/*usamos o "." + nome - para referenciar uma classe em que desejamos modificar o que esta dentro dela*/
+.principal{
+    background: #ccc;
+    /*margem de dentro*/
+    padding: 30px;
+}
+/*usamos o "#" + mome - para referenciar um id específico de um determinado texto */
+#missao{
+    /*tamanho da letra*/
+    font-size: 20px;
+}
+
+#foto{
+    width: 100%;
+}
+
+.itens{
+    font-style: italic;
+}
+
+.beneficios{
+    background: #ffffff;
+    padding: 30px;
+}
+
+.imgbeneficios{
+
+    width: 50%;
+}
